@@ -19,12 +19,22 @@ body{
     padding: 0;
 }
 
-.page1{
+.text{
     font-family: "DynaPuff", serif;
     transform: scale(.7);
+    font-weight: 700;
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    background-color: transparent;
+    border: none;
+    transition-duration: .5s;
+}
+
+.text:hover{
+    transform: scale(.75);
+    transition-duration: .5s;
+    cursor: pointer;
 }
 
 .page-div{
