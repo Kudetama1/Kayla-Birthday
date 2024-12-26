@@ -1,0 +1,145 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        font-size: 12vw;
+    }
+    to {
+        opacity: 1;
+        font-size: 10vw;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: pink;
+}
+
+.navigate {
+    display: flex;
+    justify-content: flex-start;
+    opacity: 1;
+}
+
+.button-nav{
+    background: none;
+    border: none;
+    width: 7vw;
+    height: 7vh;
+    font-family: "DynaPuff", serif;
+    font-size: 1vw;
+    color: black;
+    margin: 0;
+    transition: border-bottom .15s;
+    padding-top: .3vh;
+}
+
+.button-nav:hover{
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.video-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.video-wrap video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    opacity: .5;
+}
+
+.home-nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    z-index: 3;
+    transition: .25s background-color ease;
+}
+
+.home-title{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    font-family: "DynaPuff", serif;
+    font-size: 4.4vw;
+    color: black;
+    margin-top: 9.5vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.title2{
+    font-family: "DynaPuff", serif;
+    font-size: 8vw;
+    margin-top: 0;
+    padding-top: 0;
+    color: black;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color:white;
+    display: flex;
+}
+
+.gallery{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(249, 249, 249);
+    display: flex;
+}
+
+.blank1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.survey{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

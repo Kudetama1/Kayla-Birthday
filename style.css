@@ -21,7 +21,7 @@ body{
 
 .text{
     font-family: "DynaPuff", serif;
-    transform: scale(.7);
+    transform: scale(.6);
     font-weight: 700;
     animation-name: fadeIn;
     animation-duration: 1s;
