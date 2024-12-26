@@ -101,6 +101,7 @@ body{
 .title2{
     font-family: "DynaPuff", serif;
     font-size: 8vw;
+    font-weight: 550;
     margin-top: 0;
     padding-top: 0;
     color: black;
@@ -115,6 +116,14 @@ body{
     height: 100vh;
     background-color:pink;
     display: flex;
+}
+
+.letter{
+    font-family: "DynaPuff", serif;
+    font-size: 2.5vw;
+    color: black;
+    margin: 5vw;
+    padding-bottom: 0;
 }
 
 .gallery{
