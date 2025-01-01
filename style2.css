@@ -187,12 +187,29 @@ body{
     border: 3px solid pink;
     border-radius: 10%;
     width: 20vw;
-    height: 30vh;
+    height: 60vh;
     margin: 1vh;
     transition-duration: .5s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .option:hover{
     transform: translateY(-10%);
     transition-duration: .25s;
+    box-shadow:pink 2px 2px 3px;
+}
+
+.option img {
+    max-width: 15vw;
+    margin-top: 3vh;
+  }
+
+.option-text {
+    font-family: "DynaPuff", serif;
+    font-size: 2vw;
+    color: pink;
+    padding-bottom: 0;
 }
