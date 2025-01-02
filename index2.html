@@ -23,7 +23,7 @@
                 <a href="#home"><button class="button-nav">Home</button></a>
                 <a href="#about"><button class="button-nav">About</button></a>
                 <a href="#gallery"><button class="button-nav">Gallery</button></a>
-                <a href="#timer"><button class="button-nav">Time</button></a>
+                <a href="#timer"><button class="button-nav">Timer</button></a>
                 <a href="#survey"><button class="button-nav">Survey</button></a>
             </nav>
         </div>
@@ -38,13 +38,18 @@
         <p class="letter">
             Hi beautiful, <br>
             <br>
-            I decided to make a website for your birthday since I'm not able to see you, so I hope you like it!
+            I decided to make a website for your birthday since I'm not able to see you, and I'm really hoping you like it
+            because it took a couple weeks and like 500 lines of code lol <br><br>
+
             I wanted to let you know how much you mean to me and so many other people. You are incredibly empathetic, 
-            relentlessly hardworking, and always adapting to rough waters. You are the best thing to have happened to me since I 
+            relentlessly hardworking, and always adapting to rough waters. <br><br> 
+            
+            You are genuinely the best thing to have happened to me since I 
             started college and you always make me feel like the most special guy, because I know I am so lucky to have you. I hope
-            that your 20th year will treat the both you and us well, and I see a bright future for our relationship. 
+            that your 20th year will treat both you and us well, and I look forward to our future together. <br><br> 
+            
             I curated a gallery of my favorite pictures of us, to remind me of how beautiful you are and how blessed I am to be with 
-            you. At the end of the website there's a survey that I'd like you to fill out for your birthday presents, so please 
+            you. I also coded a timer that keeps track of how long we've been dating down to the minute. At the end of the website there's a survey that I'd like you to fill out for your birthday presents, so please 
             choose wisely!
             <br>
             <br>
@@ -103,7 +108,8 @@
       </p>
     </div>
     <div class="survey" id="survey">
-      <div class="row">
+      <p class="option-question" id="option-text">Choose your gift wisely!</p>
+      <div class="row-option">
         <button class="option" id="option1" onclick="showMessage()">
           <img src="spotifyplaque.jpg">
           <p class="option-text">Spotify Plaque</p>
@@ -152,6 +158,7 @@
 
       async function showMessage() {
         document.getElementById('option1').style.opacity = '0';
+        document.getElementById('option-text').style.opacity = '0';
         await sleep(500);
         document.getElementById('option1').style.visibility = 'hidden';
         document.getElementById('option2').style.opacity = '0';
