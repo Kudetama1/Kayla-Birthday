@@ -23,7 +23,7 @@
                 <a href="#home"><button class="button-nav">Home</button></a>
                 <a href="#about"><button class="button-nav">About</button></a>
                 <a href="#gallery"><button class="button-nav">Gallery</button></a>
-                <a href="#blank1"><button class="button-nav">Blank 1</button></a>
+                <a href="#timer"><button class="button-nav">Time</button></a>
                 <a href="#survey"><button class="button-nav">Survey</button></a>
             </nav>
         </div>
@@ -91,7 +91,16 @@
             </div>
           </div>
     </div>
-    <div class="blank1" id="blank1">
+    <div class="timer" id="timer">
+      <p class="alivetime">
+        You have been alive for... <br><span class="time" id="timeAliveElapsed"></span>
+      </p>
+      <p class="alivetime">
+        And we have been dating for... <br><span class="time" id="timeDatingElapsed"></span>
+      </p>
+      <p class="alivetime">
+        Which is about... <br><span class="time" id="datingPercent"></span></br>
+      </p>
     </div>
     <div class="survey" id="survey">
       <div class="row">
@@ -101,7 +110,7 @@
         </div>
         <div class="option">
           <img src="kayla5.jpg">
-          <p class="option-text">Flowers</p>
+          <p class="option-text">Bouquet From Me</p>
         </div>
         <div class="option">
           <img src="digitalcamera.jpg">
@@ -113,6 +122,47 @@
         </div>
       </div>
     </div>
+    <script>
+      function calculateElapsedTime(date) {
+          const startDate = new Date(date); // Set your start date here
+          const now = new Date();
+          const difference = now - startDate;
+
+          const years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365.25));
+          const months = Math.floor((difference % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
+          const weeks = Math.floor((difference % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24 * 7));
+          const days = Math.floor((difference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+          const timeElapsed = `${years} years, ${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+          
+          return timeElapsed;
+      }
+
+      function calculateDatingPercent(){
+        const aliveDate = new Date('2005-01-04'); // Set your start date here
+        const datingDate = new Date('2024-09-06T23:07:00');
+        const now = new Date();
+        const alive = now - aliveDate;
+        const dating = now - datingDate;
+        return ((dating / alive) * 100).toFixed(7);
+      }
+
+      function passElement(){
+        const elapsedAliveTime = calculateElapsedTime('2005-01-04');
+        const elapsedDatingTime = calculateElapsedTime('2024-09-06T23:07:00');
+        document.getElementById('timeAliveElapsed').textContent = elapsedAliveTime;
+        document.getElementById('timeDatingElapsed').textContent = elapsedDatingTime;
+        document.getElementById('datingPercent').textContent = `${calculateDatingPercent()}% of your life! (and still growing)`;
+      }
+
+      // Update every second
+      setInterval(passElement, 1000);
+      passElement();
+    
+  </script>
 </body>
 
 </html>
