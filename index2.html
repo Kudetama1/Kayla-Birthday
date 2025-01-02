@@ -104,26 +104,34 @@
     </div>
     <div class="survey" id="survey">
       <div class="row">
-        <div class="option">
-          <img src="spotifyplaque.png">
+        <button class="option" id="option1" onclick="showMessage()">
+          <img src="spotifyplaque.jpg">
           <p class="option-text">Spotify Plaque</p>
-        </div>
-        <div class="option">
-          <img src="kayla5.jpg">
+        </button>
+        <button class="option" id="option2" onclick="showMessage()">
+          <img src="bouquet.jpg">
           <p class="option-text">Bouquet From Me<br></p>
           <p class="disclaimer">(Not this one)</p>
-        </div>
-        <div class="option">
+        </button>
+        <button class="option" id="option3" onclick="showMessage()">
           <img src="digitalcamera.jpg">
           <p class="option-text">Sony DSC-TX10</p>
-        </div>
-        <div class="option">
+        </button>
+        <button class="option" id="option4" onclick="showMessage()">
           <img src="kayla5.jpg">
           <p class="option-text">Bracelet</p>
-        </div>
+        </button>
       </div>
+      <p class="just-kidding-text" id="just-kidding-text">
+        Just kidding, you're getting all of the gifts! But I hope you enjoyed the website :)
+      </p>
     </div>
     <script>
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms))
+      } 
+      
       function calculateElapsedTime(date) {
           const startDate = new Date(date); // Set your start date here
           const now = new Date();
@@ -140,6 +148,24 @@
           const timeElapsed = `${years} years, ${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
           
           return timeElapsed;
+      }
+
+      async function showMessage() {
+        document.getElementById('option1').style.opacity = '0';
+        await sleep(500);
+        document.getElementById('option1').style.visibility = 'hidden';
+        document.getElementById('option2').style.opacity = '0';
+        await sleep(500);
+        document.getElementById('option2').style.visibility = 'hidden';
+        document.getElementById('option3').style.opacity = '0';
+        await sleep(500);
+        document.getElementById('option3').style.visibility = 'hidden';
+        document.getElementById('option4').style.opacity = '0';
+        await sleep(500);
+        document.getElementById('option4').style.visibility = 'hidden';
+        await sleep(500);
+        document.getElementById('just-kidding-text').style.visibility = 'initial';
+        document.getElementById('just-kidding-text').style.color = 'pink';
       }
 
       function calculateDatingPercent(){
