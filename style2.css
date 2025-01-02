@@ -28,10 +28,10 @@ body{
 .button-nav{
     background: none;
     border: none;
-    width: 7vw;
-    height: 7vh;
+    width: 9vw;
+    height: 9vh;
     font-family: "DynaPuff", serif;
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: black;
     margin: 0;
     transition: border-bottom .15s;
@@ -155,12 +155,12 @@ body{
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    transition-duration: .25s;
+    transition-duration: .15s;
   }
 
   .column img:hover {
     transform: scale(103%);
-    transition-duration: .25s;
+    transition-duration: .15s;
   }
 
 .timer{
