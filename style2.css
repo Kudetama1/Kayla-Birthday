@@ -175,7 +175,7 @@ body{
 
 .alivetime{
     font-family: "DynaPuff", serif;
-    font-size: 3vw;
+    font-size: 4vw;
     color: black;
     margin: 0;
     padding: 4vw;
@@ -186,12 +186,6 @@ body{
 .time{
     font-family: "DynaPuff", serif;
     font-size: 2.3vw;
-    color: black;
-}
-
-.percent{
-    font-family: "DynaPuff", serif;
-    font-size: 3vw;
     color: black;
 }
 
@@ -215,9 +209,9 @@ body{
     margin: 1vh;
     transition-duration: .5s;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .option:hover{
@@ -229,7 +223,10 @@ body{
 
 .option img {
     max-width: 15vw;
-    margin-top: 3vh;
+    max-height: 15vw;
+    margin: 0;
+    margin-top: 8vh;
+    border-radius: 10%;
   }
 
 .option-text {
@@ -237,4 +234,12 @@ body{
     font-size: 2vw;
     color: pink;
     padding-bottom: 0;
+    margin: 0;
+    margin-top: 4vh;
+}
+
+.disclaimer {
+    font-family: "DynaPuff", serif;
+    font-size: 1vw;
+    color: pink;
 }
