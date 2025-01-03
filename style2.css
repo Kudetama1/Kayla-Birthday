@@ -19,6 +19,13 @@ body{
     background-color: pink;
 }
 
+.confetti {
+    position: fixed;
+    transform: scale(700%);
+    filter:blur(1px);
+    opacity: 50%;
+}
+
 .navigate {
     display: flex;
     justify-content: flex-start;
